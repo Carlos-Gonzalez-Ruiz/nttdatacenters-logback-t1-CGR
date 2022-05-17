@@ -1,0 +1,35 @@
+<configuration debug="true">
+
+	<!-- Variable fecha -->
+	<timestamp key="logDateVar" datePattern="dd-MM-yyyy" />
+	
+	<!-- Salida del log -->
+	<appender name="rolling" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		
+		<!-- Fichero log -->
+		<file>C://dev//logs//logCGR${logDateVar}.log</file>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>//home//carlos//.dev//logs//logCGR${logDateVar}.%i.logDual.zip</fileNamePattern>
+			<!-- Se quiere como mínimo 1 y como máximo 3 -->
+			<minIndex>1</minIndex>
+			<maxIndex>3</maxIndex>
+		</rollingPolicy>
+		
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<!-- El tamaño máximo ha de ser de 50KB -->
+			<maxFileSize>50 KB</maxFileSize>
+		</triggeringPolicy>
+		
+		<!-- Formato del log -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Logger root-->
+	<root level="debug">
+		<appender-ref ref="rolling" />
+	</root>
+
+</configuration>
