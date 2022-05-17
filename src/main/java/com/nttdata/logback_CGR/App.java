@@ -17,9 +17,9 @@ import org.slf4j.LoggerFactory;
  * @author Carlos González Ruiz
  *
  */
-public class DownloadManager {
+public class App {
 	/** Logger */
-	private static final Logger LOG = LoggerFactory.getLogger(DownloadManager.class);
+	private static final Logger LOG = LoggerFactory.getLogger(App.class);
 	
 	/** Constantes */
 	private static final int N_PACKAGES = 10000;
