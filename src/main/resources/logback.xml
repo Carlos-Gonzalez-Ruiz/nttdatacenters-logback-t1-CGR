@@ -10,7 +10,7 @@
 		<file>C://dev//logs//logCGR${logDateVar}.log</file>
 		
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<fileNamePattern>//home//carlos//.dev//logs//logCGR${logDateVar}.%i.logDual.zip</fileNamePattern>
+			<fileNamePattern>C://dev//logs//logCGR${logDateVar}.%i.logDual.zip</fileNamePattern>
 			<!-- Se quiere como mínimo 1 y como máximo 3 -->
 			<minIndex>1</minIndex>
 			<maxIndex>3</maxIndex>
